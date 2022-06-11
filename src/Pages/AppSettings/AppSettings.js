@@ -1,8 +1,15 @@
 import React from 'react'
+import { Row, Col } from 'antd'
 
 const AppSettings = () => {
   return (
-    <div>AppSettings</div>
+    <div className='contentContainer'>
+      <Row gutter={8}>
+        <Col span={4}>
+
+        </Col>
+      </Row>
+    </div>
   )
 }
 

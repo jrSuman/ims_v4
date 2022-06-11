@@ -113,6 +113,6 @@
   border-radius: 8px;
   overflow: hidden;
   background-color: var(--primaryBackground);
-  margin-top: 16px;
+  margin-bottom: 16px;
   padding: 16px 8px;
 }

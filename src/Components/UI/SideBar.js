@@ -7,7 +7,7 @@ import Logo from '../../Assets/Images/logo.png'
 import { MdDashboard, MdNoteAdd, MdAttachMoney, MdEmail } from 'react-icons/md'
 import { IoBarChartSharp, IoLogoWechat, IoDocumentText, IoDocument, IoDocumentTextOutline } from 'react-icons/io5'
 import { FaBuilding, FaStethoscope, FaUserAlt } from 'react-icons/fa'
-import { BsClipboardData, BsCalendar3, BsGearWideConnected, BsFillCalendarCheckFill, BsFillBellFill } from 'react-icons/bs'
+import { BsClipboardData, BsCalendar3, BsGearWideConnected, BsFillCalendarCheckFill, BsFillBellFill, BsGearFill } from 'react-icons/bs'
 import { Link, NavLink } from 'react-router-dom'
 import NavigationLink from './NavigationLink'
 
@@ -153,12 +153,19 @@ const navData = [
     exact: true
   },
   {
-    id: 6,
-    name: 'user',
-    icon: FaUserAlt,
-    pathname: '/user',
+    id: 5,
+    name: 'settings',
+    icon: BsGearFill,
+    pathname: '/settings',
     exact: true
   },
+  // {
+  //   id: 7,
+  //   name: 'user',
+  //   icon: FaUserAlt,
+  //   pathname: '/user',
+  //   exact: true
+  // },
 ]
 
 

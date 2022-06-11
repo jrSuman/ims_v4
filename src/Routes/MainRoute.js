@@ -5,6 +5,7 @@ import {
   Route,
 } from "react-router-dom";
 import AppSettings from '../Pages/AppSettings/AppSettings';
+import Users from '../Pages/AppSettings/Users';
 import Dashboard from '../Pages/Dashboard/Dashboard';
 import Notification from '../Pages/Notification/Notification';
 import Project from '../Pages/Project/Project';
@@ -17,6 +18,8 @@ const MainRoute = () => {
       <Route exact path='/report' element={<Report />}></Route>
       <Route exact path='/Notification' element={<Notification />}></Route>
       <Route exact path='/settings' element={<AppSettings />}></Route>
+
+      <Route exact path='/settings/users' element={<Users />}></Route>
     </Routes>
   )
 }
