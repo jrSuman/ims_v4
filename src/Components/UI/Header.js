@@ -5,7 +5,7 @@ import { LockOutlined, UserOutlined } from '@ant-design/icons';
 import Filter from './Filter';
 const { Option } = Select;
 
-const Header = () => {
+const Header = ({ title, isNotification, isProject }) => {
   const onFinish = (values) => {
     console.log('Received values of form: ', values);
   };
@@ -13,135 +13,130 @@ const Header = () => {
   return (
     <HeaderContainer>
       <h3 className='title-1'>
-        सिस्टममा सुचिकृत भएको र चालु अवस्थाका योजनाहरु :
+        {title}
       </h3>
-      <>
-        <Form
-          name="normal_login"
-          className="login-form"
-          initialValues={{
-            remember: true,
-          }}
-          onFinish={onFinish}
-          style={{
-            display: 'flex'
-          }}
+      {
+        isProject &&
+        <>
+          <Form
+            name="normal_login"
+            className="login-form"
+            initialValues={{
+              remember: true,
+            }}
+            onFinish={onFinish}
+            style={{
+              display: 'flex'
+            }}
 
-        >
-          <Row gutter={8}>
-            <Col span={6}>
-              <Form.Item
-                name="fiscalyear"
-                label="fiscalyear"
-                rules={[
-                  {
-                    required: true,
-                    message: 'select fistacl year',
-                  },
-                ]}
-              >
-                <Select placeholder="fiscal year">
-                  <Option value="male">2071/72</Option>
-                  <Option value="female">2072/73</Option>
-                  <Option value="other">2073/74</Option>
-                </Select>
-              </Form.Item>
-            </Col>
+          >
+            <Row gutter={8}>
+              <Col span={6}>
+                <Form.Item
+                  name="fiscalyear"
+                  label="fiscalyear"
+                  rules={[
+                    {
+                      required: true,
+                      message: 'select fistacl year',
+                    },
+                  ]}
+                >
+                  <Select placeholder="fiscal year">
+                    <Option value="male">2071/72</Option>
+                    <Option value="female">2072/73</Option>
+                    <Option value="other">2073/74</Option>
+                  </Select>
+                </Form.Item>
+              </Col>
 
-            <Col span={6}>
-              <Form.Item
-                name="ward"
-                label="ward"
-                rules={[
-                  {
-                    required: true,
-                    message: 'select ward',
-                  },
-                ]}
-              >
-                <Select placeholder="वार्ड">
-                  <Option value="male">1</Option>
-                  <Option value="female">2</Option>
-                  <Option value="other">3</Option>
-                </Select>
-              </Form.Item>
-            </Col>
-            <Col span={6}>
-              <Form.Item
-                name="ward"
-                label="विषयगत क्षेत्र"
-                rules={[
-                  {
-                    required: true,
-                    message: 'select region',
-                  },
-                ]}
-              >
-                <Select placeholder="विषयगत क्षेत्र">
-                  <Option value="male">demmy pro 1</Option>
-                  <Option value="female">demmy pro 2</Option>
-                  <Option value="other">demmy pro 3</Option>
-                </Select>
-              </Form.Item>
-            </Col>
-            <Col span={6}>
-              <Form.Item
-                name="ward"
-                label="विषयगत क्षेत्र"
-                rules={[
-                  {
-                    required: true,
-                    message: 'select region',
-                  },
-                ]}
-              >
-                <Select placeholder="विषयगत क्षेत्र">
-                  <Option value="male">demmy pro 1</Option>
-                  <Option value="female">demmy pro 2</Option>
-                  <Option value="other">demmy pro 3</Option>
-                </Select>
-              </Form.Item>
-            </Col>
-            <Col span={6}>
-              <Form.Item
-                name="ward"
-                label="विषयगत क्षेत्र"
-                rules={[
-                  {
-                    required: true,
-                    message: 'select region',
-                  },
-                ]}
-              >
-                <Select placeholder="विषयगत क्षेत्र">
-                  <Option value="male">demmy pro 1</Option>
-                  <Option value="female">demmy pro 2</Option>
-                  <Option value="other">demmy pro 3</Option>
-                </Select>
-              </Form.Item>
-            </Col>
-            <Col span={6}>
-              <Form.Item>
-                <Button type="primary" htmlType="submit" className="login-form-button">
-                  फिल्टर गर्नुहोस
-                </Button>
-              </Form.Item>
-            </Col>
-            <Col span={6} offset={6}>
-              <Filter />
-            </Col>
-          </Row>
+              <Col span={6}>
+                <Form.Item
+                  name="ward"
+                  label="ward"
+                  rules={[
+                    {
+                      required: true,
+                      message: 'select ward',
+                    },
+                  ]}
+                >
+                  <Select placeholder="वार्ड">
+                    <Option value="male">1</Option>
+                    <Option value="female">2</Option>
+                    <Option value="other">3</Option>
+                  </Select>
+                </Form.Item>
+              </Col>
+              <Col span={6}>
+                <Form.Item
+                  name="ward"
+                  label="विषयगत क्षेत्र"
+                  rules={[
+                    {
+                      required: true,
+                      message: 'select region',
+                    },
+                  ]}
+                >
+                  <Select placeholder="विषयगत क्षेत्र">
+                    <Option value="male">demmy pro 1</Option>
+                    <Option value="female">demmy pro 2</Option>
+                    <Option value="other">demmy pro 3</Option>
+                  </Select>
+                </Form.Item>
+              </Col>
+              <Col span={6}>
+                <Form.Item
+                  name="ward"
+                  label="विषयगत क्षेत्र"
+                  rules={[
+                    {
+                      required: true,
+                      message: 'select region',
+                    },
+                  ]}
+                >
+                  <Select placeholder="विषयगत क्षेत्र">
+                    <Option value="male">demmy pro 1</Option>
+                    <Option value="female">demmy pro 2</Option>
+                    <Option value="other">demmy pro 3</Option>
+                  </Select>
+                </Form.Item>
+              </Col>
+              <Col span={6}>
+                <Form.Item
+                  name="ward"
+                  label="विषयगत क्षेत्र"
+                  rules={[
+                    {
+                      required: true,
+                      message: 'select region',
+                    },
+                  ]}
+                >
+                  <Select placeholder="विषयगत क्षेत्र">
+                    <Option value="male">demmy pro 1</Option>
+                    <Option value="female">demmy pro 2</Option>
+                    <Option value="other">demmy pro 3</Option>
+                  </Select>
+                </Form.Item>
+              </Col>
+              <Col span={6}>
+                <Form.Item>
+                  <Button type="primary" htmlType="submit" className="login-form-button">
+                    फिल्टर गर्नुहोस
+                  </Button>
+                </Form.Item>
+              </Col>
+              <Col span={6} offset={6}>
+                <Filter />
+              </Col>
+            </Row>
+          </Form>
+        </>
+      }
 
-
-
-
-
-
-
-
-
-        </Form>
-      </>
     </HeaderContainer>
   )
 }

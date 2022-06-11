@@ -99,7 +99,7 @@ const Project = () => {
   const data = [
     {
       key: '1',
-      projectTitle: 'title one',
+      projectTitle: 'title one title one title one title one title one title one title one title one title one title one title one title one ',
       estimatedBudget: 4000,
       settlementAmount: 3000,
       stageOfPlanning: "pending",
@@ -145,7 +145,7 @@ const Project = () => {
   };
   return (
     <div>
-      <Header></Header>
+      <Header title={"सिस्टममा सुचिकृत भएको र चालु अवस्थाका योजनाहरु :"} isProject></Header>
       <div className="contentContainer">
         <Table columns={columns} dataSource={data} onChange={onChange} />
       </div>
