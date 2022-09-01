@@ -11,7 +11,9 @@ import {
 
 function App() {
   return (
-    <Layouts></Layouts>
+    <Layouts>
+    <h1>running</h1>
+    </Layouts>
   );
 }
 
